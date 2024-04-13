@@ -53,7 +53,7 @@ public class AddGroupExpense implements Initializable
     public void initialize(URL location, ResourceBundle resources) 
     {
         Category.getSelectionModel().select("Category");
-        GroupMember.getSelectionModel().select("Group Method");
+        GroupMember.getSelectionModel().select("Paid by");
 
         try{   
             Class.forName("oracle.jdbc.driver.OracleDriver");  
