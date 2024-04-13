@@ -99,11 +99,12 @@ public class AddGroupMember
     }
     public void back(ActionEvent event) throws IOException
     {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GroupMembers.fxml"));
         root = loader.load();	
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        GroupMemberController controller = loader.getController();
+        controller.setName(group_name);
         scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("Home.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }

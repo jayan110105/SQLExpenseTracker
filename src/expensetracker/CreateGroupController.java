@@ -36,7 +36,7 @@ public class CreateGroupController implements Initializable
         try{   
             Class.forName("oracle.jdbc.driver.OracleDriver");  
             con=DriverManager.getConnection(  
-            "jdbc:oracle:thin:@localhost:1521:xe","system","Jayan2005");  
+            "jdbc:oracle:thin:@localhost:1521:xe","system",AppGlobal.password);  
             stmt=con.createStatement();  
         }
         catch(Exception e){ System.out.println(e);}  
@@ -66,7 +66,7 @@ public class CreateGroupController implements Initializable
             
             System.out.println("Group Created !!");
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Expenses.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Group.fxml"));
             root = loader.load();	
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
@@ -81,7 +81,7 @@ public class CreateGroupController implements Initializable
     }
     public void back(ActionEvent event) throws IOException
     {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Group.fxml"));
         root = loader.load();	
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

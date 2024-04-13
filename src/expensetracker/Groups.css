@@ -32,3 +32,7 @@
     -fx-font-size: 15px;
     -fx-background-radius:  15px;
 }
+.back
+{
+  -fx-background-color:  transparent;
+}

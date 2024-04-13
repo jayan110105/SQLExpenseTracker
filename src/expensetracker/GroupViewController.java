@@ -42,7 +42,7 @@ public class GroupViewController implements Initializable
         try{   
             Class.forName("oracle.jdbc.driver.OracleDriver");  
             con=DriverManager.getConnection(  
-            "jdbc:oracle:thin:@localhost:1521:xe","system","Jayan2005");  
+            "jdbc:oracle:thin:@localhost:1521:xe","system",AppGlobal.password);  
             stmt = con.createStatement();  
 
             ResultSet rs = stmt.executeQuery("select groupname from groupmember,groups where userid="+AppGlobal.CurrentUserId+" and groupmember.groupid = groups.groupid");

@@ -43,7 +43,7 @@ public class LogInController implements Initializable
         try{   
             Class.forName("oracle.jdbc.driver.OracleDriver");  
             con=DriverManager.getConnection(  
-            "jdbc:oracle:thin:@localhost:1521:xe","system","Jayan2005");  
+            "jdbc:oracle:thin:@localhost:1521:xe","system",AppGlobal.password);  
             stmt=con.createStatement();  
         }
         catch(Exception e){ System.out.println(e);}  

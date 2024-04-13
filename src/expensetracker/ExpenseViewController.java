@@ -39,7 +39,7 @@ public class ExpenseViewController implements Initializable
         try{   
             Class.forName("oracle.jdbc.driver.OracleDriver");  
             con=DriverManager.getConnection(  
-            "jdbc:oracle:thin:@localhost:1521:xe","system","Jayan2005");  
+            "jdbc:oracle:thin:@localhost:1521:xe","system",AppGlobal.password);  
             stmt = con.createStatement();  
 
             ResultSet rs = stmt.executeQuery("select expense_date,description,categoryname,amount from PersonalExpenses,ExpenseCategory where PersonalExpenses.categoryid = ExpenseCategory.categoryid and userid = "+AppGlobal.CurrentUserId);

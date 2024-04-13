@@ -45,7 +45,7 @@ public class OverviewController implements Initializable
         try{   
             Class.forName("oracle.jdbc.driver.OracleDriver");  
             con=DriverManager.getConnection(  
-            "jdbc:oracle:thin:@localhost:1521:xe","system","Jayan2005");  
+            "jdbc:oracle:thin:@localhost:1521:xe","system",AppGlobal.password);  
             stmt=con.createStatement();  
 
             ResultSet rs = stmt.executeQuery("select categoryname,sum(amount) from personalexpenses p,expensecategory e where e.categoryid=p.categoryid and userid = "+AppGlobal.CurrentUserId+" group by p.categoryid,categoryname"); 

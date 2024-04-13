@@ -43,7 +43,7 @@ public class GroupMemberController
         try{   
             Class.forName("oracle.jdbc.driver.OracleDriver");  
             con=DriverManager.getConnection(  
-            "jdbc:oracle:thin:@localhost:1521:xe","system","Jayan2005");  
+            "jdbc:oracle:thin:@localhost:1521:xe","system",AppGlobal.password);  
             stmt = con.createStatement();  
 
             ResultSet rs = stmt.executeQuery("select username from usertable u,groupmember g,groups gr where gr.groupid = g.groupid and u.userid = g.userid and groupname = '"+name+"'");
