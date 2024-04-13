@@ -1,0 +1,43 @@
+*
+{
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold; 
+}
+.container
+{
+    -fx-background-color: #e3d9fc;
+}
+.title
+{
+    -fx-text-fill:  #2a3465;
+    -fx-font-size: 28px;
+}
+.list-view 
+{
+    -fx-background-color: #e3d9fc;
+    -fx-background-insets: 0;  
+    -fx-padding: 0;          
+}
+.list-view .list-cell 
+{
+    -fx-background-color: #e3d9fc;
+    -fx-alignment: center;
+}
+.add_button
+{
+  -fx-background-color:  #2a3465;
+  -fx-background-radius:  50%;
+}
+
+.menu_button_selected
+{
+  -fx-background-color:  transparent;
+  -fx-text-fill:  #2a3465;
+}
+
+.menu_button_unselected
+{
+  -fx-background-color:  transparent;
+  -fx-text-fill:  #31333f;
+}
+

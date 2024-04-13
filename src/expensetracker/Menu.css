@@ -1,0 +1,32 @@
+@font-face 
+{
+    font-family: 'Helvetica';
+    src:url('Font/HelveticaNeueCondensedBold.ttf');
+    /* src: url('Font/HelveticaNeueCondensedBold.ttf'); */
+}
+
+* 
+{
+    -fx-font-family: 'Helvetica';
+}
+
+.root
+{
+    -fx-background-color: black;
+}
+
+.button
+{
+  -fx-background-color:  #2f3c44;
+  -fx-background-radius:  10px;
+  -fx-text-fill:  #a1b4bb;
+  /* -fx-font-family: "Arial";
+  -fx-font-weight: Bold;  */
+}
+
+.label
+{
+    -fx-text-fill:  white;  
+    /* -fx-font-family: "Arial";
+    -fx-font-weight: Bold;  */
+}

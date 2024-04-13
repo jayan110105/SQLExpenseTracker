@@ -1,0 +1,137 @@
+*
+{
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold; 
+}
+.container
+{
+    -fx-background-color: #e3d9fc;
+}
+.label
+{
+  -fx-text-fill: #2a3465;
+  -fx-font-size: 15px;
+}
+.title
+{
+    -fx-font-size: 28px;
+}
+.choice-box
+{
+    -fx-background-color:  white;
+    -fx-mark-color: #a1b4bb;
+    -fx-background-radius:  15px;
+}
+.choice-box .arrow
+{
+    -fx-background-color: #2a3465;
+}
+.choice-box .context-menu 
+{ 
+    -fx-background-color: white; 
+}
+
+.choice-box .menu-item > .label 
+{ 
+    -fx-text-fill: #2a3465; 
+}
+.date-picker
+{
+    -fx-background-color: transparent; 
+    -fx-text-alignment: right;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent; 
+}
+
+.date-picker .arrow-button .arrow 
+{
+    -fx-background-color: #2a3465;
+    -fx-pref-width: 15px;
+    -fx-pref-height: 15px;
+}
+
+.date-picker .cell 
+{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #2a3465;
+}
+
+.date-picker-popup 
+{
+    -fx-border-color: #e3d9fc;
+}
+
+.date-picker-popup .month-year-pane 
+{
+    -fx-background-color: #ffffff;
+}
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+  -fx-background-color: #a1b4bb;
+}
+.date-picker .cell:hover 
+{
+    -fx-background-color: #e3d9fc;
+    -fx-text-fill: #2f3c44;
+
+}
+   
+.date-picker .cell:focused 
+{
+    -fx-background-color: #e3d9fc;
+    -fx-text-fill: #2f3c44;
+}
+
+.date-picker-popup .week-number-cell {
+	-fx-text-fill: #e3d9fc;
+}
+
+.text-field
+{
+  -fx-background-color: transparent;
+  -fx-border-color:  #2a3465;
+  -fx-border-width:  0;
+  -fx-text-fill:  #2a3465;
+  -fx-prompt-text-fill: #2a3465;
+  -fx-font-size: 15px;
+} 
+.text-area
+{
+    -fx-text-fill:  #2a3465;
+    -fx-font-size: 15px;
+}
+.text-area .content
+{
+  -fx-background-color:  #ffffff;
+}
+
+.button_add
+{
+  -fx-font-size: 15px;
+  -fx-background-color:  #2a3465;
+  -fx-background-radius:  15px;
+  -fx-text-fill:  #ffffff;
+}
+
+.date-picker .text-field
+{
+    -fx-text-alignment: right;
+}
+
+.amount-container
+{
+    -fx-background-color: white;
+    -fx-background-radius:  15px;
+}
+.amount-text
+{
+    -fx-border-width:  0;
+    -fx-background-color: transparent;
+    -fx-font-size: 28px;
+}
+.back
+{
+  -fx-background-color:  transparent;
+}

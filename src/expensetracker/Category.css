@@ -1,0 +1,30 @@
+*
+{
+  -fx-font-family: "Arial";
+  -fx-font-weight: Bold; 
+}
+.root
+{
+    -fx-background-color: black;
+}
+.label
+{
+    -fx-text-fill:  #a1b4bb;
+}
+#Title
+{
+    -fx-text-fill:  white;
+}
+.button
+{
+  -fx-background-color:  #2f3c44;
+  -fx-background-radius:  10px;
+  -fx-text-fill:  #a1b4bb;
+}
+.text-field
+{
+  -fx-background-color: transparent;
+  -fx-border-color:  #a1b4bb;
+  -fx-border-width:  0 0 2px 0;
+  -fx-text-fill:  #ffffff;
+} 

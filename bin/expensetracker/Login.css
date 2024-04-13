@@ -1,0 +1,45 @@
+*
+{
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold; 
+}
+
+.container 
+{
+    -fx-background-color: #e3d9fc;
+    -fx-alignment: center;
+}
+
+.label
+{
+  -fx-font-size: 15px;
+  -fx-text-fill: #2a3465;
+}
+.icon
+{
+  -fx-padding: 0px 0px 0px 10px;
+}
+.title
+{
+  -fx-font-size: 28px;
+}
+.text-field
+{
+  -fx-background-color: transparent;
+  -fx-border-color:  #2a3465;
+  -fx-border-width:  0 0 2px 0;
+  -fx-text-fill:  #2a3465;
+  -fx-font-size: 15px;
+} 
+
+.button
+{
+  -fx-background-color:  #2a3465;
+  -fx-background-radius:  15px;
+  -fx-text-fill:  white;
+  -fx-font-size: 15px;
+}
+.back
+{
+  -fx-background-color:  transparent;
+}

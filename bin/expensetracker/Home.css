@@ -1,0 +1,18 @@
+.root
+{
+  -fx-background-color: black;
+}
+.label
+{
+    -fx-text-fill:  white;  
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold; 
+}
+.button
+{
+  -fx-background-color:  #2f3c44;
+  -fx-background-radius:  10px;
+  -fx-text-fill:  white;
+  -fx-font-family: "Arial";
+  -fx-font-weight: Bold; 
+}

@@ -1,0 +1,49 @@
+create table UserTable(
+UserID number(4) primary key,
+Username varchar(20) unique not null,
+Password varchar(20) not null);
+
+create table ExpenseCategory(
+CategoryId number(4) primary key,
+CategoryName varchar(20) unique not null);
+
+create table PersonalExpenses(
+ExpenseId number(4) primary key,
+UserID number(4),
+Amount number(8,2),
+CategoryId number(4),
+Description varchar(50),
+Expense_Date Date not null,
+foreign key(UserId) references UserTable(UserId),
+foreign key(CategoryId) references ExpenseCategory(CategoryId));
+
+create table Groups(
+GroupId number(4) primary key,
+GroupName varchar(20) unique not null,
+Description varchar(50));
+
+create table GroupMember(
+GroupId number(4),
+UserId number(4),
+MemberId number(4),
+primary key(GroupId,MemberId),
+unique(GroupId,UserId));
+
+create table GroupExpenses(
+ExpenseId number(4) primary key,
+GroupId number(4),
+MemberId number(4),
+CategoryId number(4),
+Amount number(8,2),
+Description varchar(50),
+ExpenseDate Date,
+foreign key (GroupId) references Groups(GroupId),
+foreign key (GroupId,MemberId) references GroupMember(GroupId,MemberId),
+foreign key (CategoryId) references ExpenseCategory(CategoryId));
+
+create table PaymentMethod(
+MethodId number(4) primary key,
+MethodName varchar(20) unique);
+
+ALTER TABLE PersonalExpenses
+ADD MethodId number(4) REFERENCES PaymentMethod(MethodId);

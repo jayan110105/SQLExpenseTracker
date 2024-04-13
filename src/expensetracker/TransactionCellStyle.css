@@ -1,0 +1,47 @@
+*
+{
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold; 
+}
+
+.background_container
+{
+    -fx-background-color: #e3d9fc;
+}
+.label
+{
+    -fx-text-fill:  #2a3465;  
+    -fx-font-size: 15px;
+}
+
+.negative
+{
+    -fx-text-fill: #e66d72;
+}
+
+.positive
+{
+    -fx-text-fill: #18bf89;
+}
+
+.date-text
+{
+    -fx-text-fill:  #2a3465;
+}
+.category-text 
+{
+  -fx-padding: 5 15;
+  -fx-background-color:  #2a3465;
+  -fx-background-radius:  15px;
+  -fx-text-fill:  white;
+}
+.line {
+    -fx-stroke: #2a3465;  /* Adjust stroke color as needed */
+    -fx-stroke-width: 2;  /* Adjust stroke width as needed */
+    
+    -fx-layout-x: 50%;
+    -fx-layout-y: 50%;
+    
+    /* -fx-transform: translate(-50%, -50%);   */
+    /* Center the anchor point */
+  }

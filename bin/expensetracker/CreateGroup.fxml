@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" styleClass="container" stylesheets="@Groups.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.CreateGroupController">
+   <children>
+      <Label fx:id="Title" layoutX="206.0" layoutY="14.0" styleClass="title" text="Create a Group" />
+      <Label layoutX="200.0" layoutY="105.0" text="Group Name" />
+      <TextField fx:id="GroupName" layoutX="308.0" layoutY="102.0" />
+      <Label layoutX="200.0" layoutY="158.0" text="Description" />
+      <TextField fx:id="Description" layoutX="308.0" layoutY="153.0" />
+      <AnchorPane layoutX="377.0" layoutY="216.0">
+         <children>
+            <Button layoutX="-36.0" mnemonicParsing="false" onAction="#Create" prefHeight="42.0" prefWidth="154.0" text="Done" />
+            <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="-15.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/add-group.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
