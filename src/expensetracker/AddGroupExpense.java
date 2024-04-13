@@ -205,6 +205,16 @@ public class AddGroupExpense implements Initializable
                     ps2.setDate(6, exDate);
                     ps2.setNull(7, Types.INTEGER);
                     ps2.executeUpdate();
+
+                    ps2 =  con.prepareStatement("INSERT INTO PersonalExpenses VALUES (?,?,?,?,?,?,?)");
+                    ps2.setInt(1, pid);
+                    ps2.setInt(2, uid);
+                    ps2.setDouble(3, amnt);
+                    ps2.setInt(4, cat_id);
+                    ps2.setString(5, "You paid "+amnt+" for "+gdesc);
+                    ps2.setDate(6, exDate);
+                    ps2.setNull(7, Types.INTEGER);
+                    ps2.executeUpdate();
                 }
             }
 

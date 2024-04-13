@@ -5,15 +5,16 @@
 }
 .root
 {
-    -fx-background-color: black;
+  -fx-background-color: #e3d9fc;
 }
 .label
 {
-    -fx-text-fill:  #a1b4bb;
+    -fx-text-fill:   #2f3c44;
 }
-#Title
+.title
 {
-    -fx-text-fill:  white;
+    -fx-text-fill:  #2a3465;
+    -fx-font-size: 28px;
 }
 .button
 {
@@ -24,7 +25,19 @@
 .text-field
 {
   -fx-background-color: transparent;
-  -fx-border-color:  #a1b4bb;
+  -fx-border-color:   #2f3c44;
   -fx-border-width:  0 0 2px 0;
-  -fx-text-fill:  #ffffff;
+  -fx-text-fill:  #a1b4bb;
 } 
+
+.menu_button_selected
+{
+  -fx-background-color:  transparent;
+  -fx-text-fill:  #2a3465;
+}
+
+.menu_button_unselected
+{
+  -fx-background-color:  transparent;
+  -fx-text-fill:  #31333f;
+}
