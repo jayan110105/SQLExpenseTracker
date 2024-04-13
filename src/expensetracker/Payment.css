@@ -1,30 +1,19 @@
 *
 {
-  -fx-font-family: "Arial";
-  -fx-font-weight: Bold; 
+    -fx-font-family: "Arial";
+    -fx-font-weight: Bold; 
 }
-.root
+.container
 {
-    -fx-background-color: black;
+    -fx-background-color: #e3d9fc;
 }
-.label
+.title
 {
-    -fx-text-fill:  #a1b4bb;
+    -fx-text-fill:  #2a3465;
+    -fx-font-size: 28px;
 }
-#Title
+.input-box
 {
-    -fx-text-fill:  white;
+  -fx-background-color:  white;
+  -fx-background-radius:  15px;
 }
-.button
-{
-  -fx-background-color:  #2f3c44;
-  -fx-background-radius:  10px;
-  -fx-text-fill:  #a1b4bb;
-}
-.text-field
-{
-  -fx-background-color: transparent;
-  -fx-border-color:  #a1b4bb;
-  -fx-border-width:  0 0 2px 0;
-  -fx-text-fill:  #ffffff;
-} 

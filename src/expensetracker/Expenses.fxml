@@ -55,5 +55,15 @@
             <Button alignment="BOTTOM_CENTER" layoutY="2.0" mnemonicParsing="false" onAction="#Overview" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected" text="Overview" />
          </children>
       </AnchorPane>
+      <AnchorPane layoutX="407.0" layoutY="400.0">
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true" styleClass="menu_button">
+               <image>
+                  <Image url="@img/more_unselected.png" />
+               </image>
+            </ImageView>
+            <Button alignment="BOTTOM_CENTER" layoutY="2.0" mnemonicParsing="false" onAction="#more" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected" text="More" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
