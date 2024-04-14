@@ -4,13 +4,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.AddExpenseCategory">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Category.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.AddExpenseCategory">
    <children>
-      <Label fx:id="Title" layoutX="240.0" layoutY="14.0" text="Create a New Category" />
-      <TextField fx:id="category" layoutX="311.0" layoutY="56.0" />
-      <Label layoutX="164.0" layoutY="60.0" text="Category name " />
-      <Button layoutX="349.0" layoutY="97.0" mnemonicParsing="false" onAction="#Add" text="Create a Category" />
+      <Label fx:id="Title" layoutX="158.0" layoutY="14.0" styleClass="title" text="Create a New Category" />
+      <Button layoutX="209.0" layoutY="212.0" mnemonicParsing="false" onAction="#Add" prefHeight="41.0" prefWidth="181.0" text="Create a Category">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
       <Label fx:id="Error" layoutX="164.0" layoutY="101.0" prefHeight="18.0" prefWidth="238.0" textFill="RED" />
+      <TextField fx:id="category" layoutX="336.0" layoutY="109.0" text="Parties">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="48.0" layoutY="106.0" prefHeight="41.0" prefWidth="279.0" text="Category Name: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
