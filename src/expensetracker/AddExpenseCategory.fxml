@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -8,63 +9,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Category.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.AddExpenseCategory">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.AddExpenseCategory">
    <children>
       <Label fx:id="Title" layoutX="158.0" layoutY="14.0" styleClass="title" text="Create a New Category" />
-      <Button layoutX="209.0" layoutY="212.0" mnemonicParsing="false" onAction="#Add" prefHeight="41.0" prefWidth="181.0" text="Create a Category">
+      <Button layoutX="328.0" layoutY="162.0" mnemonicParsing="false" onAction="#Add" prefHeight="32.0" prefWidth="118.0" text="Add">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Label fx:id="Error" layoutX="164.0" layoutY="101.0" prefHeight="18.0" prefWidth="238.0" textFill="RED" />
-      <TextField fx:id="category" layoutX="336.0" layoutY="109.0" text="Parties">
+      <Label fx:id="Error" layoutX="180.0" layoutY="328.0" prefHeight="18.0" prefWidth="238.0" textFill="RED" />
+      <TextField fx:id="category" layoutX="268.0" layoutY="105.0" prefHeight="30.0" prefWidth="179.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Label layoutX="48.0" layoutY="106.0" prefHeight="41.0" prefWidth="279.0" text="Category Name: ">
+      <Label layoutX="176.0" layoutY="111.0" text="Category" />
+      <Button layoutX="24.0" layoutY="20.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="37.0" styleClass="back">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="12.0" />
          </font>
-      </Label>
-      <AnchorPane layoutX="86.0" layoutY="311.0" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected">
-         <children>
-            <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" styleClass="menu_button_unselected" text="Expenses" />
-            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="37.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/Indian_Rupee_symbol.png" />
+                  <Image url="@img/back.png" />
                </image>
             </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="196.0" layoutY="311.0" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected">
-         <children>
-            <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" styleClass="menu_button_unselected" text="Groups" />
-            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="37.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/681494.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="300.0" layoutY="312.0" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected">
-         <children>
-            <Button layoutX="11.0" layoutY="49.0" mnemonicParsing="false" styleClass="menu_button_unselected" text="Overview" />
-            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="37.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/pie-chart.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="402.0" layoutY="311.0" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected">
-         <children>
-            <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" styleClass="menu_button_unselected" text="More" />
-            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="37.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/more_unselected.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
+         </graphic>
+      </Button>
    </children>
+   <stylesheets>
+      <URL value="@Category.css" />
+      <URL value="@Members.css" />
+   </stylesheets>
 </AnchorPane>
