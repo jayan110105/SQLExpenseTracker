@@ -21,7 +21,7 @@
       <PieChart fx:id="Pie" layoutX="42.0" layoutY="55.0" prefHeight="293.0" prefWidth="522.0" />
       <Circle fill="#e3d9fc" layoutX="303.0" layoutY="202.0" radius="65.0" stroke="TRANSPARENT" strokeType="INSIDE" />
       <ListView fx:id="listView" layoutX="10.0" layoutY="349.0" prefHeight="137.0" prefWidth="586.0" />
-      <AnchorPane layoutX="42.0" layoutY="505.0">
+      <AnchorPane layoutX="82.0" layoutY="504.0">
          <children>
             <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="32.0" pickOnBounds="true" preserveRatio="true" styleClass="menu_button">
                <image>
@@ -31,7 +31,7 @@
             <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#expenses" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected" text="Expenses" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="167.0" layoutY="504.0">
+      <AnchorPane layoutX="207.0" layoutY="503.0">
          <children>
             <ImageView fitHeight="23.0" fitWidth="30.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true" styleClass="menu_button">
                <image>
@@ -41,7 +41,7 @@
             <Button alignment="BOTTOM_CENTER" layoutY="2.0" mnemonicParsing="false" onAction="#group" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected" text="Groups" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="288.0" layoutY="504.0">
+      <AnchorPane layoutX="328.0" layoutY="503.0">
          <children>
             <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true" styleClass="menu_button">
                <image>
@@ -51,7 +51,7 @@
             <Button alignment="BOTTOM_CENTER" layoutY="2.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_selected" text="Overview" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="406.0" layoutY="504.0">
+      <AnchorPane layoutX="446.0" layoutY="503.0">
          <children>
             <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true" styleClass="menu_button">
                <image>

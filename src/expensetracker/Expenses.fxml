@@ -25,7 +25,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <AnchorPane layoutX="40.0" layoutY="401.0">
+      <AnchorPane layoutX="81.0" layoutY="400.0">
          <children>
             <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="32.0" pickOnBounds="true" preserveRatio="true" styleClass="menu_button">
                <image>
@@ -35,7 +35,7 @@
             <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_selected" text="Expenses" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="165.0" layoutY="400.0">
+      <AnchorPane layoutX="206.0" layoutY="399.0">
          <children>
             <ImageView fitHeight="23.0" fitWidth="30.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true" styleClass="menu_button">
                <image>
@@ -45,7 +45,7 @@
             <Button alignment="BOTTOM_CENTER" layoutY="2.0" mnemonicParsing="false" onAction="#Group" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected" text="Groups" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="286.0" layoutY="400.0">
+      <AnchorPane layoutX="327.0" layoutY="399.0">
          <children>
             <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true" styleClass="menu_button">
                <image>
@@ -55,7 +55,7 @@
             <Button alignment="BOTTOM_CENTER" layoutY="2.0" mnemonicParsing="false" onAction="#Overview" prefHeight="42.0" prefWidth="78.0" styleClass="menu_button_unselected" text="Overview" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="407.0" layoutY="400.0">
+      <AnchorPane layoutX="448.0" layoutY="399.0">
          <children>
             <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true" styleClass="menu_button">
                <image>

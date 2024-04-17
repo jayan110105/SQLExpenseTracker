@@ -61,7 +61,7 @@
          </children>
       </AnchorPane>
       <Button layoutX="191.0" layoutY="410.0" mnemonicParsing="false" onAction="#Add" prefHeight="27.0" prefWidth="218.0" styleClass="button_add" text="Add Transaction" />
-      <Label fx:id="Error" layoutX="152.0" layoutY="453.0" prefHeight="18.0" prefWidth="235.0" textFill="RED" />
+      <Label fx:id="Error" alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="455.0" prefHeight="18.0" prefWidth="235.0" styleClass="error" textFill="RED" />
       <Button layoutX="21.0" layoutY="10.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="37.0" styleClass="back">
          <font>
             <Font name="System Bold" size="12.0" />

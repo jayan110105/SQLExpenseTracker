@@ -23,7 +23,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Label fx:id="Error" layoutX="175.0" layoutY="139.0" prefHeight="18.0" prefWidth="186.0" textFill="RED" />
+      <Label fx:id="Error" alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="203.0" prefHeight="18.0" prefWidth="281.0" styleClass="error" textFill="RED" />
       <Button layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="37.0" styleClass="back">
          <font>
             <Font name="System Bold" size="12.0" />

@@ -70,6 +70,13 @@ public class AddPaymentMethod implements Initializable
             stage.show();
             // Error.setText("Please pick a User name !!");
         }
+        catch(java.sql.SQLIntegrityConstraintViolationException e)
+        {
+            if(method_name == "")
+            Error.setText("Please enter a method name !!");
+            else
+            Error.setText("method already exists !!");
+        }
         catch(Exception e)
         { 
             System.out.println(e);

@@ -43,3 +43,7 @@
 {
   -fx-background-color:  transparent;
 }
+.error
+{
+  -fx-text-fill: #e66d72;
+}

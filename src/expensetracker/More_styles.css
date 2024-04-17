@@ -44,4 +44,6 @@
 .options
 {
     -fx-background-color: transparent;
+    -fx-text-fill:  #31333f;
+    -fx-font-size: 15px;
 }

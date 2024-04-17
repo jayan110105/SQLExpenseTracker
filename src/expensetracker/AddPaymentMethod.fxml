@@ -11,10 +11,10 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="600.0" styleClass="container" stylesheets="@Members.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.AddPaymentMethod">
    <children>
       <Label fx:id="Title" layoutX="157.0" layoutY="14.0" styleClass="title" text="Add Payment Method" />
-      <TextField fx:id="Method" layoutX="263.0" layoutY="96.0" prefHeight="30.0" prefWidth="179.0" styleClass="input-box" />
-      <Button layoutX="324.0" layoutY="165.0" mnemonicParsing="false" onAction="#Add" prefHeight="32.0" prefWidth="118.0" text="Add" />
-      <Label fx:id="Error" layoutX="196.0" layoutY="347.0" prefHeight="18.0" prefWidth="183.0" textFill="RED" />
-      <Label layoutX="119.0" layoutY="102.0" text="Payment Method" />
+      <TextField fx:id="Method" layoutX="270.0" layoutY="97.0" prefHeight="30.0" prefWidth="179.0" styleClass="input-box" />
+      <Button layoutX="331.0" layoutY="166.0" mnemonicParsing="false" onAction="#Add" prefHeight="32.0" prefWidth="118.0" text="Add" />
+      <Label fx:id="Error" layoutX="126.0" layoutY="222.0" prefHeight="18.0" prefWidth="326.0" styleClass="error" textFill="RED" />
+      <Label layoutX="126.0" layoutY="103.0" text="Payment Method" />
       <Button layoutX="24.0" layoutY="20.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="37.0" styleClass="back">
          <font>
             <Font name="System Bold" size="12.0" />
