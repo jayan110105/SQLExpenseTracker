@@ -42,7 +42,7 @@ public class ExpenseViewController implements Initializable
             "jdbc:oracle:thin:@localhost:1521:xe","system",AppGlobal.password);  
             stmt = con.createStatement();  
 
-            ResultSet rs = stmt.executeQuery("select expense_date,description,categoryname,amount from PersonalExpenses,ExpenseCategory where PersonalExpenses.categoryid = ExpenseCategory.categoryid and userid = "+AppGlobal.CurrentUserId);
+            ResultSet rs = stmt.executeQuery("select expense_date,description,categoryname,amount from PersonalExpenses,ExpenseCategory where PersonalExpenses.categoryid = ExpenseCategory.categoryid and userid = "+AppGlobal.CurrentUserId+" order by expense_date DESC");
             while(rs.next())
             {
                 transactionsObservableList.add(new transaction(rs.getDate(1), rs.getString(2), rs.getString(3), rs.getDouble(4)));

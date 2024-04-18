@@ -1,6 +1,10 @@
 package expensetracker;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,10 +22,17 @@ public class GroupCellController extends ListCell<Groups>
     private FXMLLoader mLLoader;
 
     @FXML
-    private Label Group_Name;
+    private Label Amount;
 
     @FXML
     private AnchorPane Cell;
+
+    @FXML
+    private Label Group_Name;
+
+    @FXML
+    private Label no_member;
+
 
     private Stage stage;
     private Scene scene;
@@ -33,25 +44,26 @@ public class GroupCellController extends ListCell<Groups>
         super.updateItem(group, empty);
 
         if(empty || group == null) {
-
             setText(null);
             setGraphic(null);
-
-        } else {
+        } 
+        else {
             if (mLLoader == null) {
                 mLLoader = new FXMLLoader(getClass().getResource("GroupCell.fxml"));
                 mLLoader.setController(this);
 
                 try {
                     mLLoader.load();
-                } catch (IOException e) {
+                } 
+                catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
 
-            Group_Name.setText(group.name);
-
+            Group_Name.setText(group.name); 
+            no_member.setText(group.member);
+            Amount.setText(group.amount);
+ 
             setText(null);
             setGraphic(Cell);
 

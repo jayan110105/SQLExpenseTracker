@@ -1,0 +1,10 @@
+create or replace trigger group_expense
+after insert or update or delete on groupexpenses
+for each row
+begin
+case
+when inserting then
+UPDATE groups SET total_expense = total_expense+:NEW.amount WHERE groupid = :NEW.groupid;
+END CASE;
+END;
+/

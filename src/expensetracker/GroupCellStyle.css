@@ -11,14 +11,22 @@
 .label
 {
     -fx-text-fill:  #2a3465;  
-    -fx-font-size: 15px;
+    -fx-font-size: 16px;
 }
-.line {
+.subtitle
+{
+    -fx-font-size: 13px;
+}
+.line 
+{
     -fx-stroke: #2a3465;  /* Adjust stroke color as needed */
     -fx-stroke-width: 2;  /* Adjust stroke width as needed */
     
     -fx-layout-x: 50%;
     -fx-layout-y: 50%;
-    
-    -fx-transform: translate(-50%, -50%);  /* Center the anchor point */
-  }
+}
+.negative
+{
+    -fx-text-fill: #e66d72; 
+}
+

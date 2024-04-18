@@ -17,6 +17,8 @@ public class MemberCellController extends ListCell<Members>
 
     @FXML
     private AnchorPane Cell;
+
+    
     
     @Override
     protected void updateItem(Members member, boolean empty) 

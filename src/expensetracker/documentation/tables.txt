@@ -1,3 +1,11 @@
+drop table UserTable;
+drop table ExpenseCategory;
+drop table PersonalExpenses;
+drop table GroupExpenses;
+drop table Groups;
+drop table GroupMember;
+drop table PaymentMethod;
+
 create table UserTable(
 UserID number(4) primary key,
 Username varchar(20) unique not null,
@@ -15,7 +23,9 @@ CategoryId number(4),
 Description varchar(50),
 Expense_Date Date not null,
 foreign key(UserId) references UserTable(UserId),
-foreign key(CategoryId) references ExpenseCategory(CategoryId));
+foreign key(CategoryId) references ExpenseCategory(CategoryId),
+MethodId number(4) REFERENCES PaymentMethod(MethodId)
+);
 
 create table GroupExpenses(
 ExpenseId number(4) primary key,
@@ -27,13 +37,18 @@ Description varchar(50),
 ExpenseDate Date,
 foreign key (GroupId) references Groups(GroupId),
 foreign key (GroupId, MemberId) references GroupMember(GroupId, MemberId),
-foreign key (CategoryId) references ExpenseCategory(CategoryId));
+foreign key (CategoryId) references ExpenseCategory(CategoryId),
+MethodId number(4) REFERENCES PaymentMethod(MethodId)
+);
 
 
 create table Groups(
 GroupId number(4) primary key,
 GroupName varchar(20) unique not null,
-Description varchar(50));
+Description varchar(50),
+total_expense number(12,2) DEFAULT 0,
+TotalMembers number(4)
+);
 
 create table GroupMember(
 GroupId number(4),
@@ -46,19 +61,4 @@ unique(GroupId,UserId));
 create table PaymentMethod(
 MethodId number(4) primary key,
 MethodName varchar(20) unique);
-
-ALTER TABLE PersonalExpenses
-ADD MethodId number(4) REFERENCES PaymentMethod(MethodId);
-
-alter table groups
-add total_expense number(12,2);
-
-ALTER TABLE groups
-MODIFY total_expense DEFAULT 0;
-
-ALTER TABLE GroupExpenses
-ADD MethodId number(4) REFERENCES PaymentMethod(MethodId);
-
-ALTER TABLE Groups
-ADD TotalMembers number(4);
 

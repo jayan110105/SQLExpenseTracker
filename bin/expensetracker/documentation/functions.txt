@@ -1,0 +1,12 @@
+create or replace function total_expense(uid personalexpenses.userid%type)
+return personalexpenses.amount%type as total personalexpenses.amount%type;
+cursor c1 is select * from personalexpenses where userid = uid;
+BEGIN
+	total := 0;
+	for row in c1
+	loop
+		total := total+row.amount;
+	end loop;
+	return total;
+end total_expense;
+/

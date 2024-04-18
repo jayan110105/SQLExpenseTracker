@@ -64,7 +64,7 @@ public class OverviewController implements Initializable
 
             CategoryObservableList = FXCollections.observableArrayList();
 
-            rs = stmt.executeQuery("select categoryname,sum(amount) from personalexpenses p,expensecategory e where e.categoryid=p.categoryid and userid = "+AppGlobal.CurrentUserId+" group by p.categoryid,categoryname");
+            rs = stmt.executeQuery("select categoryname,sum(amount) from personalexpenses p,expensecategory e where e.categoryid=p.categoryid and userid = "+AppGlobal.CurrentUserId+" group by p.categoryid,categoryname order by sum(amount) DESC");
             while(rs.next())
             {
                 CategoryObservableList.add(new Category(rs.getString(1), String.format("%.2f", (Math.abs(rs.getDouble(2))/Total)*100)+"%",Math.abs(rs.getDouble(2))));
