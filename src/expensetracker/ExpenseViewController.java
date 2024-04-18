@@ -13,12 +13,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
 public class ExpenseViewController implements Initializable
 {
+    @FXML
+    private Label title;
 
     @FXML
     private ListView<transaction> listView;
@@ -35,6 +38,7 @@ public class ExpenseViewController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources) 
     {
+        double totalExpense = 0;
         transactionsObservableList = FXCollections.observableArrayList();
         try{   
             Class.forName("oracle.jdbc.driver.OracleDriver");  
@@ -47,11 +51,19 @@ public class ExpenseViewController implements Initializable
             {
                 transactionsObservableList.add(new transaction(rs.getDate(1), rs.getString(2), rs.getString(3), rs.getDouble(4)));
             } 
+
+            CallableStatement cs = con.prepareCall("{? = call total_expense(?)}");
+            cs.registerOutParameter(1, Types.NUMERIC);
+            cs.setInt(2, AppGlobal.CurrentUserId);
+            cs.execute();
+            totalExpense = cs.getDouble(1);
         }
         catch(Exception e){ System.out.println(e);}
         
         listView.setItems(transactionsObservableList);
         listView.setCellFactory(transactionsListView -> new TransactionCellController());
+
+        title.setText("EXPENSES - ₹"+totalExpense);
     }
     public void Add(ActionEvent event) throws IOException
     {
