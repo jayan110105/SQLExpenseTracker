@@ -67,6 +67,12 @@ public class AddGroupMember
 
                 ps.executeUpdate();
 
+                ps =  con.prepareStatement("update groups set TotalMembers = ? where groupid =  ?");
+                ps.setInt(1, mid);
+                ps.setInt(2, gid);
+
+                ps.executeUpdate();
+
                 System.out.println("Member Added !!");
 
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("GroupMembers.fxml"));

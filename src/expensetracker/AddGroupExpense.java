@@ -41,6 +41,9 @@ public class AddGroupExpense implements Initializable
     private DatePicker ExpenseDate;
 
     @FXML
+    private ChoiceBox<String> Method;
+
+    @FXML
     private Label Error;
 
     private Stage stage;
@@ -65,6 +68,10 @@ public class AddGroupExpense implements Initializable
             ResultSet rs = stmt.executeQuery("select CategoryName from ExpenseCategory"); 
             while(rs.next())
             Category.getItems().add(rs.getString(1));
+
+            rs = stmt.executeQuery("select MethodName from PaymentMethod"); 
+            while(rs.next())
+            Method.getItems().add(rs.getString(1));
         }
         catch(Exception e){ System.out.println(e);}  
     }
@@ -86,6 +93,7 @@ public class AddGroupExpense implements Initializable
 
     public void Add(ActionEvent event) throws IOException
     {
+        int meth_id = 0;
         int id = 0;
         int pid = 0;
         int gid = 0;
@@ -125,9 +133,11 @@ public class AddGroupExpense implements Initializable
             while(rs.next())
             cat_id  = rs.getInt(1);
 
-
-
-            PreparedStatement ps =  con.prepareStatement("INSERT INTO GroupExpenses VALUES (?,?,?,?,?,?,?)");
+            rs = stmt.executeQuery("select MethodId from PaymentMethod where MethodName = '"+Method.getValue()+"'"); 
+            while(rs.next())
+            meth_id  = rs.getInt(1);
+            
+            PreparedStatement ps =  con.prepareStatement("INSERT INTO GroupExpenses VALUES (?,?,?,?,?,?,?,?)");
             ps.setInt(1, id);
             ps.setInt(2, gid);
             ps.setInt(3, mid);
@@ -135,6 +145,7 @@ public class AddGroupExpense implements Initializable
             ps.setDouble(5, amnt);
             ps.setString(6, desc);
             ps.setDate(7, Date.valueOf(expense_date));
+            ps.setInt(8, meth_id);
             ps.executeUpdate();
 
             System.out.println("Group Expense Added !!");
@@ -176,7 +187,7 @@ public class AddGroupExpense implements Initializable
                     ps2.setInt(4, cat_id);
                     ps2.setString(5, "You owe "+name+" for "+gdesc);
                     ps2.setDate(6, exDate);
-                    ps2.setNull(7, Types.INTEGER);
+                    ps2.setInt(7, meth_id);
                     ps2.executeUpdate();
                 }
                 else
@@ -203,7 +214,7 @@ public class AddGroupExpense implements Initializable
                     ps2.setInt(4, cat_id);
                     ps2.setString(5, "You owe "+(amnt-(amnt/no_members))+" for "+gdesc);
                     ps2.setDate(6, exDate);
-                    ps2.setNull(7, Types.INTEGER);
+                    ps2.setInt(7, meth_id);
                     ps2.executeUpdate();
 
                     ps2 =  con.prepareStatement("INSERT INTO PersonalExpenses VALUES (?,?,?,?,?,?,?)");
@@ -213,7 +224,7 @@ public class AddGroupExpense implements Initializable
                     ps2.setInt(4, cat_id);
                     ps2.setString(5, "You paid "+amnt+" for "+gdesc);
                     ps2.setDate(6, exDate);
-                    ps2.setNull(7, Types.INTEGER);
+                    ps2.setInt(7, meth_id);
                     ps2.executeUpdate();
                 }
             }

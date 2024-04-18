@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="600.0" styleClass="container" stylesheets="@PersonalExpense.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.AddGroupExpense">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="600.0" styleClass="container" stylesheets="@PersonalExpense.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.AddGroupExpense">
    <children>
       <Label fx:id="Title" layoutX="165.0" layoutY="14.0" styleClass="title" text="Add Group Expense" />
       <AnchorPane layoutX="191.0" layoutY="66.0" prefHeight="57.0" prefWidth="217.0" styleClass="amount-container">
@@ -45,7 +45,7 @@
             <ChoiceBox fx:id="Category" layoutX="37.0" layoutY="3.0" prefHeight="39.0" prefWidth="169.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="190.0" layoutY="271.0" prefHeight="46.0" prefWidth="218.0" styleClass="amount-container">
+      <AnchorPane layoutX="190.0" layoutY="340.0" prefHeight="46.0" prefWidth="218.0" styleClass="amount-container">
          <children>
             <TextField fx:id="Description" layoutX="34.0" layoutY="3.0" prefHeight="39.0" prefWidth="169.0" promptText="Notes" />
             <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
@@ -55,13 +55,13 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="189.0" layoutY="340.0" prefHeight="46.0" prefWidth="218.0" styleClass="amount-container">
+      <AnchorPane layoutX="189.0" layoutY="409.0" prefHeight="46.0" prefWidth="218.0" styleClass="amount-container">
          <children>
             <DatePicker fx:id="ExpenseDate" editable="false" layoutX="36.0" layoutY="8.0" prefHeight="30.0" prefWidth="175.0" promptText="Date" />
          </children>
       </AnchorPane>
-      <Button layoutX="191.0" layoutY="410.0" mnemonicParsing="false" onAction="#Add" prefHeight="27.0" prefWidth="218.0" styleClass="button_add" text="Add Transaction" />
-      <Label fx:id="Error" alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="455.0" prefHeight="18.0" prefWidth="235.0" styleClass="error" textFill="RED" />
+      <Button layoutX="191.0" layoutY="479.0" mnemonicParsing="false" onAction="#Add" prefHeight="27.0" prefWidth="218.0" styleClass="button_add" text="Add Transaction" />
+      <Label fx:id="Error" alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="524.0" prefHeight="18.0" prefWidth="235.0" styleClass="error" textFill="RED" />
       <Button layoutX="21.0" layoutY="10.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="37.0" styleClass="back">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -74,5 +74,15 @@
             </ImageView>
          </graphic>
       </Button>
+      <AnchorPane layoutX="191.0" layoutY="272.0" prefHeight="46.0" prefWidth="218.0" styleClass="amount-container">
+         <children>
+            <ChoiceBox fx:id="Method" layoutX="39.0" layoutY="3.0" prefHeight="39.0" prefWidth="169.0" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/wallet-filled-money-tool.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
