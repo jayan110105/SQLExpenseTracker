@@ -11,7 +11,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="607.0" styleClass="container" stylesheets="@viewExpenses.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="expensetracker.ExpenseViewController">
    <children>
       <ListView fx:id="listView" layoutX="11.0" layoutY="52.0" prefHeight="338.0" prefWidth="585.0" />
-      <Label layoutX="228.0" layoutY="14.0" styleClass="title" text="EXPENSES">
+      <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="32.0" prefWidth="586.0" styleClass="title" text="EXPENSES">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>

@@ -46,7 +46,7 @@ public class LogInController implements Initializable
             "jdbc:oracle:thin:@localhost:1521:xe","system",AppGlobal.password);  
             stmt=con.createStatement();  
         }
-        catch(Exception e){ System.out.println(e);}  
+        catch(Exception e){ e.printStackTrace();}  
 
     }
 
