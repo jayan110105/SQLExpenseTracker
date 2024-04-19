@@ -16,7 +16,7 @@
       <TextField fx:id="usr" layoutX="274.0" layoutY="120.0" />
       <Label layoutX="175.0" layoutY="124.0" text="User Name " />
       <Label layoutX="175.0" layoutY="166.0" text="Password " />
-      <Button layoutX="274.0" layoutY="216.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="34.0" prefWidth="188.0" text="Sing Up" />
+      <Button layoutX="274.0" layoutY="216.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="34.0" prefWidth="188.0" text="Sign Up" />
       <Label fx:id="Error" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="266.0" prefHeight="18.0" prefWidth="329.0" styleClass="error" textFill="RED" />
       <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="139.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
          <image>
